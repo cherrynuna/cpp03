@@ -2,10 +2,12 @@
 
 ClapTrap::ClapTrap() : name("noname"), HitPoint(10), EnergyPoint(10), AttackDamage(0)
 {
+	std::cout << "ClapTrap constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : name(name), HitPoint(10), EnergyPoint(10), AttackDamage(0)
 {
+	std::cout << "ClapTrap " << name << " constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& obj)
@@ -15,6 +17,7 @@ ClapTrap::ClapTrap(const ClapTrap& obj)
 	  AttackDamage(obj.AttackDamage)
 {
 	// *this = obj;
+	std::cout << "ClapTrap copy constructor called" << std::endl;
 }
 
 ClapTrap&	ClapTrap::operator=(const ClapTrap& obj)
@@ -25,6 +28,7 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& obj)
 		this->HitPoint = obj.HitPoint;
 		this->EnergyPoint = obj.EnergyPoint;
 		this->AttackDamage = obj.AttackDamage;
+		std::cout << "ClapTrap copy assignment operator called" << std::endl;
 		// this->name = obj.getName();
 		// this->Hitpoint = obj.getHitpoints();
 		// this->Energypoint = obj.getEnergypoints();
@@ -35,7 +39,9 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& obj)
 
 ClapTrap::~ClapTrap()
 {
+	std::cout << "ClapTrap destructor called" << std::endl;
 }
+
 
 void	ClapTrap::attack(const std::string& target)// target losing <attack damage> hit points
 {
@@ -70,3 +76,38 @@ void	ClapTrap::beRepaired(unsigned int amount)//it gets <amount> hit points back
 	else
 		std::cout << "ClapTrap " << this->name << " can’t do anything." << std::endl;
 }
+
+// std::string		ClapTrap::getName() const
+// {
+// 	return (this->name);
+// }
+
+// unsigned int	ClapTrap::getHitpoint(void) const
+// {
+// 	return (this->Hitpoint);
+// }
+
+// unsigned int	ClapTrap::getEnergypoint(void) const
+// {
+// 	return (this->Energypoint);
+// }
+
+// unsigned int	ClapTrap::getAttackdamage(void) const
+// {
+// 	return (this->Attackdamage);
+// }
+
+// void	ClapTrap::setHitpoints(unsigned int const num)
+// {
+// 	this->Hitpoint = num;
+// }
+
+// void	ClapTrap::setEnergypoints(unsigned int const num)
+// {
+// 	this->Energypoint = num;
+// }
+
+// void	ClapTrap::setAttackdamage(unsigned int const num)
+// {
+// 	this->Attackdamage = num;
+// }
