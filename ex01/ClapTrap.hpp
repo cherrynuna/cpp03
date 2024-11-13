@@ -13,8 +13,8 @@ class ClapTrap
 	public:
 		ClapTrap();
 		ClapTrap(std::string name);
-		ClapTrap(const ClapTrap& fixed);
-		ClapTrap&	operator=(const ClapTrap& fixed);
+		ClapTrap(const ClapTrap& obj);
+		ClapTrap&	operator=(const ClapTrap& obj);
 		virtual ~ClapTrap();//가상 함수, 자식 함수에서 변환 했음을 표시+부모~자식소멸자
 
 		virtual void	attack(const std::string& target);// to call the derived class’s overridden version
