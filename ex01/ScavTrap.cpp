@@ -27,12 +27,14 @@ ScavTrap::ScavTrap(const ScavTrap& obj) : ClapTrap(obj)
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& obj) 
 {
-	this->name = obj.name;
-	this->AttackDamage = obj.AttackDamage;
-	this->HitPoint = obj.HitPoint;
-	this->EnergyPoint = obj.EnergyPoint;
-	std::cout << "ScavTrap copy assignment operator called" << std::endl;
-
+	if (this != &obj)
+	{
+		this->name = obj.name;
+		this->HitPoint = obj.HitPoint;
+		this->EnergyPoint = obj.EnergyPoint;
+		this->AttackDamage = obj.AttackDamage;
+		std::cout << "ScavTrap copy assignment operator called" << std::endl;
+	}
 	return (*this);
 }
 
