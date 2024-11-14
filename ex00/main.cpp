@@ -7,10 +7,10 @@ int	main(void)
 	ClapTrap b(bb);
 
 	a.attack("B");
-	b.takeDamage(5);
+	b.takeDamage(0);
 	b.beRepaired(3);
 	b.attack("A");
-	a.takeDamage(10);
+	a.takeDamage(20);
 	a.beRepaired(10);
 	return (0);
 }

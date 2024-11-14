@@ -16,7 +16,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	std::cout << "ScavTrap " << name << " constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& obj) 
+ScavTrap::ScavTrap(const ScavTrap& obj) : ClapTrap(obj)
 {
 	this->name = obj.name;
 	this->AttackDamage = obj.AttackDamage;
