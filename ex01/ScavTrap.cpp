@@ -51,7 +51,7 @@ void ScavTrap::guardGate(void)
 		this->EnergyPoint--;
 	}
 	else
-		std::cout << "ClapTrap " << this->name << " can’t do anything" << std::endl;
+		std::cout << "ScavTrap " << this->name << " can’t do anything" << std::endl;
 }
 
 void ScavTrap::attack(const std::string &target)
@@ -63,5 +63,5 @@ void ScavTrap::attack(const std::string &target)
 		this->EnergyPoint--;
 	}
 	else
-		std::cout << "ClapTrap " << this->name << " can’t do anything" << std::endl;
+		std::cout << "ScavTrap " << this->name << " can’t do anything" << std::endl;
 }
